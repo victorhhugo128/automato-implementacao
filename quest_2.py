@@ -53,6 +53,7 @@ if __name__ == "__main__":
     texto = "O computador é uma máquina capaz de variados tipos de tratamento automático de informações ou processamento de dados. Entende-se por computador um sistema físico que realiza algum tipo de computação. Assumiu-se que os computadores pessoais e laptops são ícones da era da informação. O primeiro computador eletromecânico foi construído por Konrad Zuse (1910–1995). Atualmente, um microcomputador é também chamado computador pessoal ou ainda computador doméstico."
     automato = AutomatoFinitoDeterministico(13, " Ccomputadr;.,!?")
     automato.adicionar_transicao("q0", "q1", " ")
+    automato.adicionar_transicao("q0", "q2", "C")
     automato.adicionar_transicao("q1", "q2", "c")
     automato.adicionar_transicao("q1", "q2", "C")
     automato.adicionar_transicao("q2", "q3", "o")
@@ -73,8 +74,8 @@ if __name__ == "__main__":
     print(automato.estados_finais)
     print(automato.achar_ocorrencias(texto))
     
-    print(texto[1:13])
-    print(texto[132:144])
-    print(texto[293:305])
-    print(texto[411:423])
-    print(texto[439:451])
+    print("Posição 2-13: " + texto[2:13])
+    print("Posição 133-144: " + texto[133:144])
+    print("Posição 294-305: " + texto[294:305])
+    print("Posição 412-423: " + texto[412:423])
+    print("POsição 440-451: " + texto[440:451])
